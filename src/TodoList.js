@@ -1,11 +1,17 @@
 import React from "react";
 
-const TodoList = (props) => (
-	<ul>
-		{props.todos.map((todo, index) => 
-			<li key={index}>{todo}</li>
-		)}
-	</ul>
+const Todo = (props) => (
+	<li onClick={() => props.deleteTodo(props.todo)}>{props.todo}</li>
 );
+
+const TodoList = (props) => {
+	return (
+		<ul>
+			{props.todos.map((todo) => (
+				<Todo todo={todo} key={todo} deleteTodo={props.deleteTodo} />
+			))}
+		</ul>
+	);
+};
 
 export default TodoList;

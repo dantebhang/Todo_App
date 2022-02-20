@@ -5,8 +5,8 @@ export default class TodoForm extends React.Component {
 		super(props);
 		this.state = { todoInput: "" };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleChange = (event) => {
