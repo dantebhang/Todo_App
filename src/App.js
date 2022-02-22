@@ -4,15 +4,20 @@ import TodoList from "./TodoList.js";
 import TodoForm from "./TodoForm";
 
 class App extends React.Component {
+	//always call constructor when declaring state
 	constructor(props) {
 		super(props);
+		
 		this.state = {
 			todos: ["Finish homework", "Wash dishes", "Clean room", "Make waffles"],
 		};
 	}
 
+	//remember formatting of functions
 	addTodo = (todo) => {
+		//always call setState to change state 
 		this.setState((prevState) => ({
+			//create copy to not mutate state directly
 			todos: [...prevState.todos, todo],
 		}));
 	};

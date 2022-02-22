@@ -1,5 +1,6 @@
 import React from "react";
 
+//mini component that is not in a separate file 
 const Todo = (props) => (
 	<li onClick={() => props.deleteTodo(props.todo)}>{props.todo}</li>
 );
