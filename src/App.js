@@ -4,10 +4,10 @@ import TodoList from "./TodoList.js";
 import TodoForm from "./TodoForm";
 
 class App extends React.Component {
-	//always call constructor when declaring state
+	//always use constructor when declaring state
 	constructor(props) {
 		super(props);
-		
+
 		this.state = {
 			todos: ["Finish homework", "Wash dishes", "Clean room", "Make waffles"],
 		};
